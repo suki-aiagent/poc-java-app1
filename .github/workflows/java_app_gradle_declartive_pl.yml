@@ -27,8 +27,3 @@ jobs:
       run: |-
         cd app
                         gradle test
-    - name: Publish test results
-      uses: EnricoMi/publish-unit-test-result-action@v2.12.0
-      if: always()
-      with:
-        junit_files: app/build/test-results/test/*.xml
